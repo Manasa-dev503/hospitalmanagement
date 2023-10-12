@@ -14,6 +14,7 @@ import AddHospital from './features/AdminDashboard/AddHospital';
 import Home from './Home/Home';
 import AddBed from './features/AdminDashboard/AddBed';
 import HospitalDetails from './features/Hospital/HospitalDetails';
+import Discharge from './features/AdminDashboard/Discharge';
 //import Home from './Home/Home';
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
           {
             path:"/admindashboard/addbed",
             element: <AddBed></AddBed>
+          },
+          {
+            path:"/admindashboard/discharge",
+            element: <Discharge></Discharge>
           }
         ]
       },
