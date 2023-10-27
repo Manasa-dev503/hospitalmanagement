@@ -7,11 +7,14 @@ import reportWebVitals from './reportWebVitals';
 import '../node_modules/bootstrap/dist/js/bootstrap.min';
 import AdminDashboard from './features/AdminDashboard/AdminDashboard';
 import Adddata from './features/AdminDashboard/Adddata';
+import Comments from './LoginDetails/Comments';
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import LoginDetails from './LoginDetails/LoginDetails';
+import Home from './Home/Home';
+import Albums from './LoginDetails/Albums';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,8 +40,33 @@ const router = createBrowserRouter([
       },
       {
         path:"/admindashboard/login/feed",
-        element: <LoginDetails></LoginDetails>
+        element: <LoginDetails></LoginDetails>,
+      },
+      {
+        path:"/admindashboard/login/comments/:id",
+        element: <Comments></Comments>
+      },
+      {
+        path:"/admindashboard/login/home",
+        element: <AdminDashboard></AdminDashboard>
+      },
+      {
+        path:"/admindashboard/login/albums",
+        element: <Albums></Albums>
+
+      },
+      {
+        path:"/admindashboard/login/feed/comments/:id",
+        element: <Comments></Comments>
+      },
+      {
+        path:"",
+        element: <Home></Home>
       }
+          
+        
+    
+      
 
     ]
    

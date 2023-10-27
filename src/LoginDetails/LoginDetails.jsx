@@ -2,7 +2,6 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { useGetAllPostsQuery } from '../services/postsApi';
-import { useGetAllCommentsQuery } from '../services/commentsApi';
 import { Link,Outlet } from 'react-router-dom'
 
 
@@ -23,13 +22,18 @@ return (
     <div className="offcanvas-body px-0">
         <ul className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
             <li className="nav-item">
-                <Link class="nav-link text-truncate">
+                <Link class="nav-link text-truncate" to="home">
                     <i className="fs-5 bi-house"></i><span className="ms-1 d-none d-sm-inline">Home</span>
                 </Link>
             </li>
             <li className="nav-item">
                 <Link className="nav-link text-truncate" to="feed">
                 <i class="bi bi-rss-fill"></i><span className="ms-1 d-none d-sm-inline">feed</span>
+                </Link>
+            </li>
+            <li className="nav-item">
+                <Link className="nav-link text-truncate" to="albums">
+                <i class="bi bi-journal-album"></i><span className="ms-1 d-none d-sm-inline">albums</span>
                 </Link>
             </li>
             <li className="nav-item">
@@ -64,7 +68,7 @@ return (
                 <p align="justify">{post.body}</p>
                 </div>
                 <div className='card-footer'>
-                  <Link to="comments">comments</Link>
+                  <Link to={`comments/${post.id}`}>comments</Link>
                 </div>
                 </div>
 
