@@ -7,7 +7,8 @@ function AdminDashboard() {
         <center>
         <h1>AdminDashboard</h1>
         <Link to="addhospital"><button className='btn btn-primary'>Add Hospital</button></Link>&nbsp;&nbsp;&nbsp;
-        <Link to="addbed"><button className='btn btn-primary'>Add Bed</button></Link>
+        <Link to="addbed"><button className='btn btn-primary'>Add Bed</button></Link>&nbsp;&nbsp;&nbsp;
+        <Link to="discharge"><button className='btn btn-primary'>Discharge patient</button></Link>
         <Outlet></Outlet>
 
         </center>
